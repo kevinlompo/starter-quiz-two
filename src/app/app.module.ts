@@ -8,6 +8,7 @@ import { QuizComponent } from './quizzes/quiz/quiz.component';
 import { HeaderComponent } from './header/header.component';
 import { QuizFormComponent } from './quizzes/quiz-form/quiz-form.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

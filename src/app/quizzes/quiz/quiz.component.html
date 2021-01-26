@@ -1,7 +1,10 @@
 <div class="card">
     <h2>
         <i class="fab fa-leanpub"></i>
-        {{quiz.name}}
+      {{quiz.name}}
     </h2>
+  <span> Theme: {{quiz.theme}} </span>
+  <i *ngIf="quiz.theme === 'Le Football'" class="fas fa-futbol"> </i><br>
+  <span> <i>Nombre de questions: {{quiz.questions.length}}</i></span>
     <button class="button-card" (click)="selectQuiz()">Select</button>
 </div>
