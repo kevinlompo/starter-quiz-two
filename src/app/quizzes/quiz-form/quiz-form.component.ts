@@ -23,7 +23,8 @@ export class QuizFormComponent implements OnInit {
   constructor(public formBuilder: FormBuilder, public quizService: QuizService) {
     // Form creation
     this.quizForm = this.formBuilder.group({
-      name: ['']
+      name: [''],
+      theme: ['']
     });
     // You can also add validators to your inputs such as required, maxlength or even create your own validator!
     // More information: https://angular.io/guide/reactive-forms#simple-form-validation
@@ -43,6 +44,10 @@ export class QuizFormComponent implements OnInit {
     // console.log('Add quiz: ', quizToCreate);
 
     // Now, add your quiz in the list!
+
+    const quizToCreate: Quiz = this.quizForm.getRawValue() as Quiz;
+
+    this.quizService.addQuiz(quizToCreate);
   }
 
 }
