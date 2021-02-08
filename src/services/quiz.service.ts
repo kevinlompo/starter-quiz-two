@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Quiz } from '../models/quiz.model';
 import { QUIZ_LIST } from '../mocks/quiz-list.mock';
+import { Question } from '../models/question.model';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -24,8 +26,8 @@ export class QuizService {
    */
   public quizzes$: BehaviorSubject<Quiz[]> = new BehaviorSubject(this.quizzes);
 
-  constructor() {
-  }
+  constructor(private http: HttpClient) {
+    }
 
   addQuiz(quiz: Quiz) {
     // You need here to update the list of quiz and then update our observable (Subject) with the new list
@@ -37,7 +39,7 @@ export class QuizService {
 
   deleteQuiz(quiz: Quiz){
     console.log('le quizz', quiz.name, 'a été supprimer');
-     this.quizzes =  this.quizzes.filter( (quizA) => quizA !== quiz);
-     this.quizzes$.next(this.quizzes);
+    this.quizzes =  this.quizzes.filter( (quizA) => quizA !== quiz);
+    this.quizzes$.next(this.quizzes);
   }
 }

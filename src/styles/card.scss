@@ -18,6 +18,15 @@
   padding: 0.5em 1em;
 }
 
+.button-card_2 {
+  float: right;
+  background-color: $white;
+  border: solid 1px $blue;
+  color: $blue;
+  font-weight: bold;
+  padding: 0.5em 1em;
+}
+
 .button-card:hover {
   cursor: pointer;
 }

@@ -36,10 +36,12 @@ export const QUIZ_LIST: Quiz[] = [
         name: 'Le Cinéma', // What's happening if I change this value..?
         theme: 'Acteurs',
         questions: [QUESTION_ACTOR],
+        creationDate: this,
     },
     {
         name: 'Les Sports',
-        theme: 'Le Football',
+        theme: 'Football',
         questions: [QUESTION_SPORT],
+        creationDate: this,
     }
 ];

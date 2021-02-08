@@ -3,12 +3,19 @@
   <form class="quiz-form" [formGroup]="quizForm">
     <label for="title">
       Title <br>
-      <input class="input-custom" type="text" id="name" [formControlName]="'name'">
+      <input class="input-custom" type="text" id="title" [formControlName]="'name'">
     </label>
     <br>
     <label for="theme">
       Theme <br>
-      <input class="input-custom" type="text" id="theme" [formControlName]="'theme'">
+       <select name="pets" id="theme" [formControlName]="'theme'">
+         <option value="">--Please choose an option--</option>
+         <option value="Acteurs">Acteurs</option>
+         <option value="Football">Football</option>
+         <option value="Santé">Santé</option>
+         <option value="Jeu">Jeu</option>
+         <option value="Book_Dead">Book_Dead</option>
+    </select>
     </label>
     <br>
     <button type="submit" class="button-card" (click)="addQuiz()">Create</button>
@@ -16,3 +23,5 @@
 </div>
 <!-- Uncomment below to see your form structure and how it changes-->
 <br><br>{{quizForm.getRawValue() | json}}
+
+

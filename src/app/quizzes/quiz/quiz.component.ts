@@ -17,6 +17,14 @@ export class QuizComponent implements OnInit {
   @Output()
   deletedQuiz: EventEmitter<Quiz> = new EventEmitter<Quiz>();
 
+   themeByIcon = {
+    Acteurs: 'fas fa-video',
+    Football : 'fas fa-futbol',
+    Jeu : 'fas fa-gamepad',
+    Santé: 'fas fa-ambulance',
+    Book_Dead: 'fas fa-book-dead'
+  };
+
   constructor() {
   }
 
